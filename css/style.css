@@ -54,12 +54,12 @@ a {
   text-decoration: none;
 }
 
-input,
+/* input,
 button {
   font-family: var(--body-font);
   outline: none;
   border: none;
-}
+} */
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
@@ -134,9 +134,15 @@ button {
 }
 
 .color-input {
+  height: 35px;
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+
+.color-input::-webkit-color-swatch {
+  border-radius: .4rem;
+  border: 1px solid var(--first-color);
 }
 
 .user-input {
@@ -144,6 +150,13 @@ button {
   padding: .4rem .8rem;
   font-size: var(--smaller-font-size);
   color: var(--text-color-light);
+  font-family: var(--body-font);
+  border: 2px solid var(--border-color);
+  border-radius: .5rem;
+}
+
+.user-input:focus {
+  outline: none;
 }
 
 /*=============== BUTTONS ===============*/
