@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Builder 2</title>
+
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="page-builder container grid">
+    <div class="page-builder_controllers container">
+      <h1 class="main-title">
+        Page Builder
+      </h1>
+
+      <section class="background-color section">
+        <div class="input-group">
+          <label for="bg-color">Background Color:</label>
+          <input type="color" id="bg-color" value="#3858d6" class="color-input">
+        </div>
+      </section>
+
+      <div class="btn-container section grid grid--3-cols">
+        <a href="#" class="btn add-btn" onclick="addNewElement()">Add</a>
+      </div>
+    </div>
+
+    <div class="page-builder_board container"></div>
+  </div>
+
+  <!--=============== JS ===============-->
+  <script>
+    const addNewElement = () => {
+      const newElement = document.createElement("div");
+
+      // adding default style to the new element
+      newElement.style.width = "100px";
+      newElement.style.height = "100px";
+      newElement.style.border = "1px solid black";
+
+      // add background color to the new element
+      newElement.style.backgroundColor = document.querySelector("#bg-color").value;
+
+      document.querySelector(".page-builder_board").appendChild(newElement);
+    }
+  </script>
+</body>
+
+</html>
