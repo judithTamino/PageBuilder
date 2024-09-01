@@ -153,7 +153,7 @@ body {
 
 /*=============== BUTTONS ===============*/
 .btn-container {
-  position: fixed;
+  /* position: fixed; */
   bottom: 0;
   background-color: var(--body-color);
   padding-top: 1.2rem;
