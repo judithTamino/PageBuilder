@@ -20,8 +20,8 @@
       <!--==================== BACKGROUNG COLOR ====================-->
       <section class="background-color section">
         <div class="input-group">
-          <label for="bg-color">Background Color:</label>
-          <input type="color" id="bg-color" value="#3858d6" class="color-input">
+          <label for="element-bg_color">Background Color:</label>
+          <input type="color" id="element-bg_color" value="#3858d6" class="color-input">
         </div>
       </section>
 
@@ -38,13 +38,13 @@
         </div>
       </section>
 
-        <!--==================== TEXT ====================-->
-        <section class="text section">
-          <div class="input-group">
-            <label for="element-txt">Text:</label>
-            <textarea name="" id="element-txt" class="user-input" rows="4"></textarea>
-          </div>
-        </section>
+      <!--==================== TEXT ====================-->
+      <section class="text section">
+        <div class="input-group">
+          <label for="element-txt">Text:</label>
+          <textarea name="" id="element-txt" class="user-input" rows="4"></textarea>
+        </div>
+      </section>
 
       <div class="btn-container section grid grid--3-cols">
         <a href="#" class="btn add-btn" onclick="addNewElement()">Add</a>
@@ -71,7 +71,18 @@
       newElement.style.width = document.querySelector("#element-width").value + "px";
       newElement.style.height = document.querySelector("#element-height").value + "px";
 
+      // add content to the new element
+      newElement.innerText = document.querySelector("#element-txt").value;
+
       document.querySelector(".page-builder_board").appendChild(newElement);
+
+      clearInputs();
+    }
+
+    const clearInputs = () => {
+      document.querySelector("#element-width").value = "";
+      document.querySelector("#element-height").value = "";
+      document.querySelector("#element-txt").value = "";
     }
   </script>
 </body>
