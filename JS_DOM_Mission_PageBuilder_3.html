@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Builder 2</title>
+  <title>Page Builder 3</title>
 
   <!--=============== CSS ===============-->
   <link rel="stylesheet" href="css/style.css">
@@ -17,10 +17,24 @@
         Page Builder
       </h1>
 
+       <!--==================== BACKGROUNG COLOR ====================-->
       <section class="background-color section">
         <div class="input-group">
           <label for="element-bg_color">Background Color:</label>
           <input type="color" id="element-bg_color" value="#3858d6" class="color-input">
+        </div>
+      </section>
+
+         <!--==================== WIDTH & HIEGHT ====================-->
+      <section class="width-height section grid grid--2-cols">
+        <div class="input-group">
+          <label for="element-width">Width:</label>
+          <input type="number" id="element-width" class="user-input" placeholder="100px">
+        </div>
+
+        <div class="input-group">
+          <label for="element-width">Height:</label>
+          <input type="number" id="element-height" class="user-input" placeholder="100px">
         </div>
       </section>
 
@@ -44,6 +58,10 @@
 
       // add background color to the new element
       newElement.style.backgroundColor = document.querySelector("#element-bg_color").value;
+
+      // add width and height to the new element
+      newElement.style.width = document.querySelector("#element-width").value + "px";
+      newElement.style.height = document.querySelector("#element-height").value + "px";
 
       document.querySelector(".page-builder_board").appendChild(newElement);
     }
