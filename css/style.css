@@ -72,9 +72,9 @@ body {
   grid-template-columns: repeat(3, 1fr);
 }
 
-/* .grid--4-cols {
+.grid--4-cols {
   grid-template-columns: repeat(4, 1fr);
-} */
+}
 
 /* .grid--2-rows {
   grid-template-rows: repeat(2, 1fr);
