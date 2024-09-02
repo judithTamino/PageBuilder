@@ -181,9 +181,11 @@ body {
 /*=============== BUTTONS ===============*/
 .btn-container {
   position: fixed;
-  bottom: 0;
-  left: 0;
+  bottom: 3.2rem;
+  left: 3%;
   background-color: var(--body-color);
+  border-radius: .5rem;
+  border: 2px solid var(--first-color-lighter);
 }
 
 .btn {
@@ -211,20 +213,29 @@ body {
 }
 
 .remove-btn {
-  position: relative;
-  border: 0px solid transparent;
   background-color: hsla(228, 100%, 47%, 0.08);
   color: var(--first-color-alt);
+}
+
+.save-btn {
+  background-color: var(--first-color-light);
+  color: var(--first-color-lighter);
+}
+
+.remove-btn,
+.save-btn {
+  position: relative;
+  border: 0px solid transparent;
 }
 
 .btn-txt {
   content: '';
   position: absolute;
-  top: -100%;
+  top: 0%;
   left: 50%;
   transform: translateX(-50%);
   background-color: #fff;
-  padding: 3px 9px;
+  padding: 4px 8px;
   border-radius: .5rem;
   color: var(--first-color-alt);
   font-size: 1.4rem;
@@ -233,9 +244,31 @@ body {
   visibility: hidden;
 }
 
-.remove-btn:hover .btn-txt {
+.remove-btn:hover .btn-txt,
+.save-btn:hover .btn-txt {
   visibility: visible;
-  top: -200%;
+  top: -110%;
+}
+
+.glowing-btn {
+  animation: glowing 1500ms infinite;
+}
+
+@keyframes glowing {
+  0% {
+    background-color: var(--first-color-alt);
+    box-shadow: 0 0 3px var(--first-color-alt);
+  }
+
+  50% {
+    background-color: var(--first-color-light);
+    box-shadow: 0 0 10px var(--first-color-light);
+  }
+
+  100% {
+    background-color: var(--first-color-alt);
+    box-shadow: 0 0 3px var(--first-color-alt);
+  }
 }
 
 
