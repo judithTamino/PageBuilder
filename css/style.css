@@ -183,9 +183,7 @@ body {
   position: fixed;
   bottom: 0;
   left: 0;
-  /* background-color: var(--first-color); */
   background-color: var(--body-color);
-  padding: 1.2rem 2.4rem;
 }
 
 .btn {
@@ -194,14 +192,14 @@ body {
   display: inline-block;
   border-radius: .5rem;
   box-shadow: 0 4px 8px hsla(228, 66%, 45%, .25);
-  transition: all 0.2s linear;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.2s linear;
 }
 
 .btn:hover {
-  box-shadow: 0 4px 16px hsla(228, 66%, 45%, .25);
+  box-shadow: 0 4px 24px hsla(228, 66%, 45%, .3);
 }
 
 .add-btn {
@@ -211,3 +209,34 @@ body {
       hsl(228, 66%, 47%));
   color: #fff;
 }
+
+.remove-btn {
+  position: relative;
+  border: 0px solid transparent;
+  background-color: hsla(228, 100%, 47%, 0.08);
+  color: var(--first-color-alt);
+}
+
+.btn-txt {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  padding: 3px 9px;
+  border-radius: .5rem;
+  color: var(--first-color-alt);
+  font-size: 1.4rem;
+  transition: 200ms linear;
+  transition-delay: 200ms;
+  visibility: hidden;
+}
+
+.remove-btn:hover .btn-txt {
+  visibility: visible;
+  top: -200%;
+}
+
+
+
