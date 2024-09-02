@@ -254,6 +254,8 @@
 
   <!--=============== JS ===============-->
   <script>
+    let validId = true;
+    
     const addNewElement = () => {
       // choose element type
       const elementType = document.querySelector("#element-type").value;
@@ -334,7 +336,6 @@
       setDefualtValues();
     }
 
-    let validId = true;
     const isIdValid = id => {
       /* check if element id is valid => doesnt start with numbers or character and not contain any whitespace*/
       const msg = document.querySelector(".msg");
