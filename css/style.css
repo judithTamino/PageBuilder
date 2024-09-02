@@ -40,7 +40,8 @@
 }
 
 html {
-  font-size: 62.5%; /*10px*/
+  font-size: 62.5%;
+  /*10px*/
 }
 
 body {
@@ -95,7 +96,7 @@ body {
   grid-template-columns: 1fr 3fr;
   gap: 2.4rem;
   background-image: radial-gradient(hsla(228, 14%, 75%, 0.2) 2px,
-  transparent 0);
+      transparent 0);
   background-size: 3rem 3rem;
   background-position: -5px -5px;
 }
@@ -120,7 +121,7 @@ body {
   gap: .4rem;
 }
 
-.input-group > label {
+.input-group>label {
   font-size: var(--small-font-size);
   text-transform: lowercase;
 }
@@ -156,12 +157,25 @@ body {
   grid-column: 1 / 3;
 }
 
-.range > input {
+.range>input {
   accent-color: var(--first-color-alt);
 }
 
 .range-value {
   align-self: center;
+}
+
+.msg {
+  visibility: hidden;
+}
+
+.error-msg {
+  visibility: visible;
+  color: hsl(0, 72%, 51%);
+}
+
+.error-border {
+  border: 2px solid hsl(0, 72%, 51%);
 }
 
 /*=============== BUTTONS ===============*/
@@ -193,7 +207,7 @@ body {
 .add-btn {
   padding: .4em 1.6em;
   background: linear-gradient(101deg,
-  hsl(228, 66%, 53%),
-  hsl(228, 66%, 47%));
+      hsl(228, 66%, 53%),
+      hsl(228, 66%, 47%));
   color: #fff;
 }
