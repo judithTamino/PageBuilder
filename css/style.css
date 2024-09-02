@@ -122,6 +122,7 @@ body {
 
 .input-group > label {
   font-size: var(--small-font-size);
+  text-transform: lowercase;
 }
 
 .color-input {
